@@ -28,12 +28,10 @@ function onInput(e) {
 
 function onSubmit(e) {
   e.preventDefault();
-  //   if (inputRef.value === '' || textareaRef.value === '') {
-  //     return alert('Please fill in all the fields!');
-  //   }
-  if (localStorage.getItem('feedback-form-state')) {
-    console.log(currentFeedback);
+  if (inputRef.value === '' || textareaRef.value === '') {
+    return alert('Please fill in all the fields!');
   }
+  console.log(currentFeedback);
   localStorage.removeItem('feedback-form-state');
   e.currentTarget.reset();
   currentFeedback = { email: '', message: '' };
